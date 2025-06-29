@@ -1,14 +1,12 @@
 import React from "react";
-import HeroBG from "../../components/HeroBG";
-import me from "../../assets/me.jpg";
+
+import Hero from "../../components/Hero";
 
 const Home = () => {
   return (
-    <div>
-      {/* hero section */}
-      <HeroBG />
-     
-    </div>
+    <>
+      <Hero />
+    </>
   );
 };
 

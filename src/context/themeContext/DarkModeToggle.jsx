@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaRegMoon } from "react-icons/fa";
 import { LuSunMedium } from "react-icons/lu";
 
+
 export default function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.theme === "dark";
