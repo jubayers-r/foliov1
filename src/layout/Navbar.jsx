@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import DarkModeToggle from "../context/themeContext/DarkModeToggle";
 import Logo from "../components/Logo";
 
@@ -7,7 +7,7 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <a to={""}>About Me </a>
+        <Link to={"/about"}>About Me </Link>
       </li>
       <li>
         <a to={""}>Skills</a>
