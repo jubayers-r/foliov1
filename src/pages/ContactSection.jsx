@@ -1,11 +1,10 @@
-import InfiniteGridBg from "../components/InfiniteGridBg";
-import Navbar from "../layout/Navbar";
+
 
 const ContactSection = () => {
   return (
-    <InfiniteGridBg>
+    <div id="contact">
+    <>
     <section className="min-h-screen max-w-10/11 md:max-w-9/11 overflow-hidden mx-auto">
-      <Navbar/>
       <div className="mb-6">
         <div className="text-center">
           <h1 className="text-[38px] font-semibold">CONTACT</h1>
@@ -98,7 +97,8 @@ const ContactSection = () => {
 </div>
 
     </section>
-    </InfiniteGridBg>
+    </>
+    </div>
   );
 };
 

@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router";
 import MainLayout from "../layout/MainLayout";
-import Home from "../pages/Home/Home";
 import test from "../components/HeroBG";
 import AboutMe from "../pages/AboutMe";
 import SkillsMarquee from "../pages/SkillsMarquee";
 import Projects from "../pages/Projects";
 import ContactSection from "../pages/ContactSection";
+import SmoothScroll from "../pages/SmoothScroll";
 
 export const router = createBrowserRouter([
   {
@@ -14,24 +14,24 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: Home,
+        Component: SmoothScroll,
       },
-      {
-        path: "about",
-        Component: AboutMe,
-      },
-      {
-        path: "skills",
-        Component: SkillsMarquee,
-      },
-      {
-        path: "projects",
-        Component: Projects,
-      },
-      {
-        path: "contact",
-        Component: ContactSection,
-      },
+      // {
+      //   path: "about",
+      //   Component: AboutMe,
+      // },
+      // {
+      //   path: "skills",
+      //   Component: SkillsMarquee,
+      // },
+      // {
+      //   path: "projects",
+      //   Component: Projects,
+      // },
+      // {
+      //   path: "contact",
+      //   Component: ContactSection,
+      // },
     ],
   },
   {

@@ -8,10 +8,10 @@ const Hero = () => {
   const darkImage = "https://cdn-icons-png.flaticon.com/512/11743/11743790.png";
 
   return (
-    <div>
+    <div id="me">
       {/* hero section */}
       <HeroBG />
-      <div className="flex flex-col-reverse gap-5 lg:grid lg:grid-cols-3 items-center place-items-center text-center">
+      <div className=" mt-20 flex flex-col-reverse gap-5 lg:grid lg:grid-cols-3 items-center place-items-center text-center">
         {/* left side */}
         <div className="md:col-span-2 md:space-y-8 sm:space-y-3 space-y-2">
           <p className="dark:text-white flex items-center sm:text-4xl text-2xl  justify-center lg:justify-start">
@@ -57,6 +57,7 @@ const Hero = () => {
           </p>
 
           {/* social links */}
+          <div className="my-5">
           <motion.div className="flex gap-5 justify-center lg:justify-start">
             <motion.a
               whileHover={{ x: -5 }}
@@ -104,6 +105,7 @@ const Hero = () => {
               />
             </motion.a>
           </motion.div>
+          </div>
           <div className="w-full flex justify-center lg:justify-start">
             <motion.button
               whileTap={{ scale: 1.2 }}
@@ -119,6 +121,7 @@ const Hero = () => {
                 className="pointer-events-none"
               />
             </motion.button>
+
           </div>
         </div>
         {/* right side */}
