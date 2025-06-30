@@ -1,5 +1,6 @@
 import InfiniteGridBg from "../components/InfiniteGridBg";
 import FastMarquee from "../components/FastMarquee";
+import Navbar from "../layout/Navbar";
 const techLogoImports = import.meta.glob(
   "/src/assets/technologies/*.{jpg,jpeg,png,svg,webp}",
   {
@@ -26,6 +27,7 @@ const SkillsMarquee = () => {
   return (
     <InfiniteGridBg>
       <section className="min-h-screen max-w-10/11 md:max-w-9/11 overflow-hidden mx-auto">
+      <Navbar/>
         <h1 className=" text-center text-2xl md:text-3xl xl:text-4xl font-semibold">
           Recent Technologies I’ve Used
         </h1>

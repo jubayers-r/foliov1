@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, NavLink } from "react-router";
 import DarkModeToggle from "../context/themeContext/DarkModeToggle";
 import Logo from "../components/Logo";
@@ -14,13 +13,13 @@ const Navbar = () => {
       </li>
 
       <li>
-        <a to={""}>Projects</a>
+        <Link to={"/projects"}>Projects</Link>
       </li>
       <li>
         <a to={""}>Education</a>
       </li>
       <li>
-        <a to={""}>Let's Connect</a>
+        <Link to={"/contact"}>Let's Connect</Link>
       </li>
     </>
   );
