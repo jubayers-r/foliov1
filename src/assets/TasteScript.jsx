@@ -32,6 +32,10 @@ import { techLogosMap } from "../utils/getTechLogos";
         label: "GitHub",
         url: "https://github.com/jubayers-r/recipe-book-monorepo",
       },
+      {
+        label: "Details",
+        url: "https://github.com/jubayers-r/recipe-book-monorepo",
+      },
     ],
   },
 ];
