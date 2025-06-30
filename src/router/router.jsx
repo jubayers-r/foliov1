@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home/Home";
 import test from "../components/HeroBG";
 import AboutMe from "../pages/AboutMe";
+import SkillsMarquee from "../pages/SkillsMarquee";
 
 export const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
             {
                 path: "about",
                 Component: AboutMe
+            },
+            {
+                path: "skills",
+                Component: SkillsMarquee
             },
         ]
     },

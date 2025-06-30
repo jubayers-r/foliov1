@@ -1,4 +1,4 @@
-import AboutMeBG from "../components/AboutMeBG";
+import InfiniteGridBg from "../components/InfiniteGridBg";
 import aboutIMG from "../assets/about.jpg";
 
 import AboutCheckList from "../components/AboutCheckList";
@@ -7,9 +7,9 @@ import CTA from "../components/CTA";
 
 const AboutMe = () => {
   return (
-    <AboutMeBG>
-      <div className=" relative w-full bg-infinite-grid dark:bg-black dark:text-white ">
-        <div className="max-w-10/11 mx-auto grid lg:grid-cols-2 lg:gap-20 lg:mx-30 lg:my-30 place-items-center">
+    <InfiniteGridBg>
+       <div className="relative w-full">
+        <div className=" max-w-10/11 md:max-w-9/11 mx-auto grid lg:grid-cols-2 lg:gap-20 lg:mx-30 lg:my-30 place-items-center">
           {/* left side */}
           <div className="px-4">
             <img
@@ -33,7 +33,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-    </AboutMeBG>
+    </InfiniteGridBg>
   );
 };
 
