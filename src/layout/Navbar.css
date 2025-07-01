@@ -1,0 +1,21 @@
+li .active {
+  color: #ffaa00;
+  font-weight: bold;
+}
+
+li a:hover {
+  color: #ffaa00;
+}
+
+
+/* Also target .dark .active for dark mode */
+/* .dark li .active {
+  color: #ffaa00;
+  font-weight: bold;
+}
+.dark li a:hover {
+  color: #ffaa00;
+} */
+
+
+

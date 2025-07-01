@@ -1,21 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Belanosima:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Belanosima:wght@400;600;700&display=swap");
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: light --default;
 }
 @custom-variant dark (&:where(.dark, .dark *));
 
+.nav-link {
+  @apply hover:bg-transparent;
+}
+
+.nav-link.active {
+  @apply bg-transparent;
+}
+
 .bg-infinite-grid-dark {
   background-color: black;
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 .bg-infinite-grid-light {
   background-color: white;
-  background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 1px
+    ),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
 }

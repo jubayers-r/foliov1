@@ -9,9 +9,9 @@ import { div } from "motion/react-client";
 
 const AboutMe = () => {
   return (
-    <div id="about">
+    <div id="about" >
     <>
-      <div className="max-w-10/11 md:max-w-9/11 mx-auto lg:mx-30 my-50" >
+      <div className="max-w-10/11 md:max-w-9/11 mx-auto lg:mx-30 my-50" data-aos="fade-down" >
 
         <div className="grid lg:grid-cols-2 lg:gap-20 lg:my-30  place-items-center">
           {/* left side */}
@@ -31,7 +31,7 @@ const AboutMe = () => {
               <AboutCheckList />
             </div>
             {/* CTA */}
-            <div className="px-8 py-5 my-12 rounded-2xl 2xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 grid bg-white gap-2 text-black ">
+            <div className="px-8 py-5 my-12 rounded-2xl 2xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 grid bg-white gap-2 text-black shadow-sm">
               <CTA />
             </div>
           </div>

@@ -1,105 +1,170 @@
-
+import React, { useState } from "react";
+import { Mail, Phone } from "lucide-react";
+import { motion } from "framer-motion";
+import toast, { Toaster } from "react-hot-toast";
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, message } = formData;
+
+    if (!name || !email || !message) {
+      toast.error("Please fill out all fields.");
+      return;
+    }
+
+    toast.success("Message sent successfully!");
+    // reset form
+    setFormData({ name: "", email: "", message: "" });
+
+    // You can connect with Formspree, EmailJS, or your own API here
+  };
+
   return (
-    <div id="contact">
-    <>
-    <section className="min-h-screen max-w-10/11 md:max-w-9/11 overflow-hidden mx-auto">
-      <div className="mb-6">
-        <div className="text-center">
-          <h1 className="text-[38px] font-semibold">CONTACT</h1>
-          {/* <h2 className="text-[20px] font-semibold text-highlighte -mt-3">
-            Hire Me
-          </h2> */}
-        </div>
-      </div>
-
-      {/* Contact Info */}
-  <div className="text-center">
-  <div className="mb-4 flex flex-col items-center">
-  <div className="flex items-center text-xl font-semibold">
-    <svg
-      stroke="currentColor"
-      fill="currentColor"
-      strokeWidth="0"
-      viewBox="0 0 512 512"
-      className="mr-2 text-highlighte"
-      height="1em"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
+    <section
+      id="contact"
+      className=" px-4 py-20 bg-white dark:bg-black text-black dark:text-white"
+      data-aos="fade-down"
     >
-      <path d="M391.1 351.1c-15.1 0-30-2.3-44.2-6.8c-6.6-2.1-13.8-.6-18.7 4.3l-46.1 46.1c-60.6-31.9-110.2-81.4-142.1-142.1l46.1-46.1c5-5 6.5-12.2 4.3-18.7c-4.5-14.2-6.8-29.1-6.8-44.2c0-10.6-8.6-19.2-19.2-19.2H92.1C81.5 125.4 73 134 73 144.6c0 194.2 157.2 351.4 351.4 351.4c10.6 0 19.2-8.6 19.2-19.2v-76.3c0-10.6-8.6-19.2-19.2-19.2z" />
-    </svg>
-    <h1>Phone Number :</h1>
-  </div>
-  <p className="text-sm font-thin mt-2">+880 1866965359</p>
-</div>
-
-  <div className="mb-4 flex flex-col items-center">
-    <div className="flex items-center text-xl font-semibold">
-      <svg
-        stroke="currentColor"
-        fill="currentColor"
-        strokeWidth="0"
-        viewBox="0 0 24 24"
-        className="mr-2 text-highlighte"
-        height="1em"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
+      <Toaster />
+      <motion.div
+        className="max-w-3xl mx-auto text-center"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
       >
-        <path fill="none" d="M0 0h24v24H0z" />
-        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
-      </svg>
-      <h1>Email :</h1>
-    </div>
-    <p className="text-sm font-thin mt-2">jubayer.shikder.007@gmail.com</p>
-  </div>
-</div>
+        <h1 className="text-4xl sm:text-5xl font-bold mb-10">
+          Let’s Build Together
+        </h1>
 
-      {/* Contact Form */}
+        {/* Contact Info */}
+        <div className="mb-12 space-y-6">
+          <ContactInfo
+            icon={<Phone className="text-yellow-500" />}
+            title="Phone / WhatsApp Number"
+            detail="+880 1866965359"
+          />
+          <ContactInfo
+            icon={<Mail className="text-yellow-500" />}
+            title="Email"
+            detail="jubayer.shikder.007@gmail.com"
+          />
+        </div>
 
-     <div className="w-full flex justify-center">
-  <div className="w-full md:w-[700px]">
-    <div className="w-full mb-4">
-      <h1 className="font-thin">Your name</h1>
-      <input
-        type="text"
-        placeholder="Your Name"
-        className="w-full outline-none h-[60px] border bg-white rounded-full px-4 mt-3 placeholder:font-serif"
-      />
-    </div>
-
-    <div className="w-full mb-4">
-      <h1 className="font-thin">Your email</h1>
-      <input
-        type="email"
-        placeholder="Your Email"
-        className="w-full outline-none h-[60px] border bg-white rounded-full px-4 mt-3 placeholder:font-serif"
-      />
-    </div>
-
-    <div className="w-full mb-4">
-      <h1 className="font-thin">
-        Have Something on Your Mind? I'm Here to Listen!
-      </h1>
-      <textarea
-        rows="7"
-        cols="40"
-        placeholder="Write here..."
-        className="w-full outline-none py-2 border bg-white rounded-xl px-4 mt-3 placeholder:font-serif"
-      ></textarea>
-    </div>
-
-    <button className="bg-red-200 text-[#141427] font-bold px-5 py-4 rounded-xl text-md mb-4 active:scale-105 duration-150 ease-in-out">
-      Send Message
-    </button>
-  </div>
-</div>
-
+        {/* Contact Form */}
+        <motion.form
+          onSubmit={handleSubmit}
+          className="space-y-6 text-left"
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
+          <FormInput
+            label="Your name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Bruce Thomas Wayne"
+            required
+          />
+          <FormInput
+            label="Your email"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="bruce@w.enterprises.com"
+            required
+          />
+          <FormTextarea
+            label="Have something on your mind?"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Write your message here..."
+            required
+          />
+          <button
+            type="submit"
+            className="w-full bg-[#ffaa00] hover:bg-yellow-600 text-white font-semibold py-3 rounded-xl transition-all duration-200 ease-in-out active:scale-95 focus:outline-none"
+          >
+            Send Message
+          </button>
+        </motion.form>
+      </motion.div>
     </section>
-    </>
-    </div>
   );
 };
+
+const ContactInfo = ({ icon, title, detail }) => (
+  <div className="flex sm:flex-col items-center justify-start sm:text-center text-start sm:justify-center gap-3 text-lg">
+    <div className="text-2xl">{icon}</div>
+    <div>
+      <h3 className="font-semibold">{title}</h3>
+      <p className="text-md text-gray-600 dark:text-gray-300">{detail}</p>
+    </div>
+  </div>
+);
+
+const FormInput = ({
+  label,
+  name,
+  type = "text",
+  value,
+  onChange,
+  placeholder,
+  required,
+}) => (
+  <div>
+    <label htmlFor={name} className="block text-sm font-medium mb-1">
+      {label}
+    </label>
+    <input
+      type={type}
+      id={name}
+      name={name}
+      value={value}
+      onChange={onChange}
+      required={required}
+      placeholder={placeholder}
+      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-xl bg-white dark:bg-black focus:outline-none focus:ring-2 focus:ring-yellow-400"
+    />
+  </div>
+);
+
+const FormTextarea = ({
+  label,
+  name,
+  value,
+  onChange,
+  placeholder,
+  required,
+}) => (
+  <div>
+    <label htmlFor={name} className="block text-sm font-medium mb-1">
+      {label}
+    </label>
+    <textarea
+      id={name}
+      name={name}
+      value={value}
+      onChange={onChange}
+      required={required}
+      rows="6"
+      placeholder={placeholder}
+      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-xl bg-white dark:bg-black focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
+    />
+  </div>
+);
 
 export default ContactSection;

@@ -24,9 +24,9 @@ const techLogos = Object.entries(techLogoImports)
 
 const SkillsMarquee = () => {
   return (
-    <div id="skills">
+    <div id="skills" data-aos="fade-down">
     <>
-      <section className="h-fit my-50 max-w-10/11 md:max-w-9/11 overflow-hidden mx-auto">
+      <section className="h-fit my-50 max-w-10/11 md:max-w-9/11 overflow-hidden mx-auto " >
         <h1 className=" text-center text-2xl md:text-3xl xl:text-4xl font-semibold">
           Recent Technologies I’ve Used
         </h1>

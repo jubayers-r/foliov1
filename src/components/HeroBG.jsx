@@ -4,7 +4,7 @@ const HeroBG = () => {
   return (
     <svg
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 h-full w-full fill-neutral-400/80 [mask-image:radial-gradient(white,transparent)]"
+      className=" pointer-events-none absolute inset-0 lg:h-230 h-140 w-full fill-neutral-400/80  [mask-image:radial-gradient(white,transparent)]"
     >
       <defs>
         <pattern

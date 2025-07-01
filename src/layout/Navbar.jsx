@@ -1,47 +1,68 @@
-import { Link, NavLink } from "react-scroll";
+import { Link } from "react-scroll";
+import "./Navbar.css";
 import DarkModeToggle from "../context/themeContext/DarkModeToggle";
 import Logo from "../components/Logo";
-import * as Scroll from "react-scroll";
+// import * as Scroll from "react-scroll";
+import { useEffect, useState } from "react";
+import { getOffset } from "../utils/getOffset";
 // import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
+
+
+
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // navbar style change on scroll
+      setScrolled(window.scrollY > 10); // 10px scroll triggers the change
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // smooth scroll stuff
+  const [activeSection, setActiveSection] = useState("me");
+
+
   const navLinks = (
     <>
-      <li>
-        <Link to="me" spy={true} smooth={true} offset={-100} duration={500}>
-          Me{" "}
-        </Link>
-      </li>
-      <li>
-        <Link to="about" spy={true} smooth={true} offset={-100} duration={500}>
-          About Me{" "}
-        </Link>
-      </li>
-      <li>
-        <Link to="skills" spy={true} smooth={true} offset={-100} duration={500}>
-          Skills
-        </Link>
-      </li>
-
-      <li>
-        <Link to="projects" spy={true} smooth={true} offset={-100} duration={500}>
-          Projects
-        </Link>
-      </li>
-      {/* <li>
-        <a to={""}>Education</a>
-      </li> */}
-      <li>
-        <Link to="contact" spy={true} smooth={true} offset={-100} duration={500}>
-          Let's Connect
-        </Link>
-      </li>
+      {["me", "about", "skills", "projects", "contact"].map((section) => (
+        <li key={section}>
+          <Link
+            to={section}
+            spy={true}
+            smooth={true}
+            offset={getOffset(section)}
+            duration={500}
+            onSetActive={() => setActiveSection(section)}
+            className={`nav-link ${activeSection === section ? "active" : ""}`}
+          >
+            {section === "me"
+              ? "Hello"
+              : section === "about"
+              ? "About Me"
+              : section === "contact"
+              ? "Get in touch"
+              : section.charAt(0).toUpperCase() + section.slice(1)}
+          </Link>
+        </li>
+      ))}
     </>
   );
 
   return (
     <div className=" max-w-10/11 md:max-w-9/11  flex flex-col mx-auto sticky top-5 z-100">
-      <div className="navbar shadow-sm dark:shadow-white rounded-full px-5 dark:text-white bg-white/10 backdrop-blur-md  ">
+      <div
+        className={`navbar px-5 text-black/30 dark:text-white/40 transition-all duration-300 -mt-2 bg-white dark:bg-black ${
+          scrolled
+            ? "shadow-sm dark:shadow-white rounded-full bg-white/10 dark:bg-white/10 backdrop-blur-md mt-0"
+            : ""
+        }`}
+      >
+        {" "}
         {/* navbar small */}
         <div className="navbar-start">
           <div className="dropdown">
@@ -76,8 +97,8 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <DarkModeToggle />
-          <a className="btn">Resume</a>
+          {/* <DarkModeToggle /> */}
+          <a className="btn bg-[#ffaa00] hover:bg-yellow-600 text-white">Resume</a>
         </div>
       </div>
     </div>

@@ -1,10 +1,10 @@
 import React from "react";
 
 import Marquee from "react-fast-marquee";
-const FastMarquee = ({children}) => {
+const FastMarquee = ({ children }) => {
   return (
-    <Marquee gradient={false} speed={50}>
-     {children}
+    <Marquee gradient={true} speed={100}>
+      {children}
     </Marquee>
   );
 };
