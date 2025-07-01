@@ -160,7 +160,7 @@ const FormTextarea = ({
       value={value}
       onChange={onChange}
       required={required}
-      rows="6"
+      rows="3"
       placeholder={placeholder}
       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-xl bg-white dark:bg-black focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
     />
