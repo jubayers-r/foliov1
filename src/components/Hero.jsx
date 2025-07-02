@@ -46,7 +46,7 @@ const Hero = () => {
               initial={{ width: 5 }}
               animate={{ width: "100%" }}
               transition={{ duration: 2, ease: "easeInOut" }}
-              className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-pink-500 rounded-lg z-0"
+              className="absolute inset-0 bg-gradient-to-r to-yellow-500 from-pink-500 rounded-lg z-0"
             />
 
             <h1 className="relative z-10 bg-gradient-to-r bg-clip-text text-white 2xl:text-7xl xl:text-6xl md:text-5xl sm:text-4xl text-2xl font-bold px-1 xl:py-4 py-3 ">
