@@ -13,7 +13,7 @@ const ProjectsCard = () => {
   return (
     <>
       {TasteScript.map((project, index) => (
-        <div
+        <div  data-aos="fade-right"
           key={index}
           className="card lg:grid lg:grid-cols-2 lg:card-side bg-base-100 shadow-sm border border-base-300 mb-6"
         >
@@ -62,18 +62,18 @@ const ProjectsCard = () => {
 
           <div className="card-body ">
             {/* project name */}
-            <h2 className="card-title text-lg font-semibold text-primary sm:justify-center lg:justify-start">
+            <h2 className="card-title  font-semibold  sm:justify-center lg:justify-start text-2xl">
               {project.name}
             </h2>
             {/* project description */}
-            <p className="text-base-content sm:text-center lg:text-start">
+            <p className="text-lg sm:text-center lg:text-start">
               {project.description}
             </p>
             {/* project Core Functionalities */}
-            <p className=" hidden sm:inline lg:hidden text-center">
+            <p className=" hidden sm:inline lg:hidden text-center text-lg">
               Core Functionalities
             </p>
-            <ul className="list-disc list-inside sm:list-none lg:list-disc lg:list-inside text-sm text-base-content sm:text-center lg:text-start">
+            <ul className="list-disc list-inside sm:list-none lg:list-disc lg:list-inside  text-lg sm:text-center lg:text-start">
               {project.features.map((feature, i) => (
                 <li key={i}>{feature}</li>
               ))}

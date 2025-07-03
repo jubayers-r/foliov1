@@ -9,7 +9,7 @@ import { useEffect } from "react";
 const MainLayout = () => {
   useEffect(() => {
     AOS.init({
-      duration: 800, // animation duration in ms
+      duration: 1000, // animation duration in ms
       once: false, // Allow it to re-trigger on scroll up
       mirror: true, // Animate out when scrolling up
       offset: 100, // offset (in px) from the top to trigger animation

@@ -12,9 +12,11 @@ const Projects = () => {
             Recent Projects
           </h3>
           {/* card element */}
+          <div className="grid gap-10">
           <ProjectsCard />
           <ProjectsCard />
           <ProjectsCard />
+          </div>
         </div>
       </>
     </div>
