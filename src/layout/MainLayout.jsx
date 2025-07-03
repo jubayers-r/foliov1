@@ -16,7 +16,7 @@ const MainLayout = () => {
     });
   }, []);
   return (
-    <div className=" dark:bg-black ">
+    <div className=" dark:bg-black font-[Urbanist] ">
       <Navbar />
       <div className="flex flex-col min-h-screen">
         <main className="flex-grow flex flex-col justify-center ">

@@ -43,7 +43,7 @@ const ContactSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-4xl sm:text-5xl font-bold mb-10">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-10 text-start sm:text-center">
           Let’s Build Together
         </h1>
 

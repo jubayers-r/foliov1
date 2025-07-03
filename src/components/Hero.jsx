@@ -54,7 +54,7 @@ const Hero = () => {
             </h1>
           </div>
           {/* description */}
-          <p className="dark:text-[#9b9b9b] text-[#474747] lg:text-left w-[85%] lg:mx-0 mx-auto text-center ">
+          <p className="dark:text-[#9b9b9b] text-[#474747] lg:text-left w-[85%] lg:mx-0 mx-auto text-center text-lg ">
             Passionate about building modern, scalable web applications with a
             strong foundation in Computer Science. Currently exploring Next.js,
             TypeScript, and DevOps through hands-on projects, focusing on clean
@@ -112,7 +112,7 @@ const Hero = () => {
               </motion.a>
             </motion.div>
           </div>
-          <div className="w-full flex justify-center lg:justify-start gap-5">
+          <div className="w-full flex justify-center lg:justify-start gap-5  ">
             {/* hire me */}
             <Link
               to={"contact"}
@@ -121,13 +121,13 @@ const Hero = () => {
               offset={getOffset("contact")}
               duration={500}
             >
-              <button className="btn bg-[#ffaa00] hover:bg-yellow-600 text-white flex justify-center items-center lg:justify-start lg:w-auto w-fit group transition-all duration-300">
+              <button className="text-lg btn bg-[#ffaa00] hover:bg-yellow-600 text-white flex justify-center items-center lg:justify-start lg:w-auto w-fit group transition-all duration-300">
                 Hire Me
                 <IoIosArrowForward className="ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </Link>
             {/* resume */}
-            <button className="font-semibold text-center text-sm flex justify-center items-center lg:justify-start lg:w-auto w-fit hover:link-hover group transition-all duration-300">
+            <button className=" text-lg font-semibold text-center  flex justify-center items-center lg:justify-start lg:w-auto w-fit hover:link-hover group transition-all duration-300">
               Download Resume{" "}
               <IoIosArrowForward className="ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
             </button>

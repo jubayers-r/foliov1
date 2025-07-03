@@ -94,11 +94,11 @@ const Navbar = () => {
         </div>
         {/* navbar lg */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+          <ul className="menu menu-horizontal px-1 text-lg">{navLinks}</ul>
         </div>
         <div className="navbar-end">
           {/* <DarkModeToggle /> */}
-          <a className="btn bg-[#ffaa00] hover:bg-yellow-600 text-white">Resume</a>
+          <a className="btn bg-[#ffaa00] hover:bg-yellow-600 text-white text-lg">Resume</a>
         </div>
       </div>
     </div>

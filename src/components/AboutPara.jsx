@@ -5,8 +5,8 @@ const AboutPara = () => {
     return (
         <>
  <div className="p-4  max-w-4xl mx-auto">
-              <h3 className="text-3xl font-semibold mb-4">About Me</h3>
-              <p className="text-base leading-relaxed text-muted-foreground">
+              <h3 className="text-4xl font-semibold mb-4">About Me</h3>
+              <p className=" leading-relaxed text-muted-foreground text-lg">
                 In early 2024, I took a leap of faith and transitioned into web
                 development after realizing that graphic design—while creatively
                 fulfilling—didn’t align with my long-term goals. During my time
