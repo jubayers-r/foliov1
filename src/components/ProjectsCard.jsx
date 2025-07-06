@@ -1,11 +1,8 @@
 import React from "react";
-import TasteScript from "../assets/ShowCaseProjects";
+
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import TasteScript1 from "../assets/web-demo/TasteScript/TasteScript1.png";
-import TasteScript2 from "../assets/web-demo/TasteScript/TasteScript2.png";
-import TasteScript3 from "../assets/web-demo/TasteScript/TasteScript3.png";
-import TasteScript4 from "../assets/web-demo/TasteScript/TasteScript4.png";
+
 
 const ProjectsCard = ({ project }) => {
   const { name, description, features, techLogo, link, img } = project;
@@ -76,6 +73,7 @@ const ProjectsCard = ({ project }) => {
                 {linkObj.label}
               </a>
             ))}
+
           </div>
         </div>
       </div>

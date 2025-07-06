@@ -1,11 +1,8 @@
 import { createBrowserRouter } from "react-router";
 import MainLayout from "../layout/MainLayout";
 import test from "../components/HeroBG";
-import AboutMe from "../pages/AboutMe";
-import SkillsMarquee from "../pages/SkillsMarquee";
-import Projects from "../pages/Projects";
-import ContactSection from "../pages/ContactSection";
 import SmoothScroll from "../pages/SmoothScroll";
+
 
 export const router = createBrowserRouter([
   {
@@ -17,8 +14,8 @@ export const router = createBrowserRouter([
         Component: SmoothScroll,
       },
       // {
-      //   path: "about",
-      //   Component: AboutMe,
+      //   path: "/:projectId",
+      //   Component: ProjectDetailsPage,
       // },
       // {
       //   path: "skills",

@@ -87,7 +87,7 @@ const ShowCaseProjects = [
   {
     name: " 🍽️ MealMind - Optimizing Restaurants, One Bite at a Time.",
     description:
-      "A fully responsive, feature-rich restaurant management platform built with the MERN stack. It allows users to browse foods, place orders, manage their items, and streamline restaurant operations for admins and staff. Designed to be eye-pleasing, recruiter-friendly, and technically robust with JWT-authenticated private routes, Firebase login, and complete MongoDB backend integration.",
+      "A fully responsive, feature-rich restaurant management platform built with the MERN stack. It allows users to browse foods, place orders, manage their items. Technically robust with JWT-authenticated private routes, Firebase login, and complete MongoDB backend integration.",
     features: [
       "Robust Authentication & Route Protection",
       "Full Food Lifecycle Management",
@@ -107,7 +107,6 @@ const ShowCaseProjects = [
       techLogosMap["7"],
       techLogosMap["15"],
       techLogosMap["17"],
-      techLogosMap["19"],
     ],
     img: [meal1, meal2, meal3, meal4],
     link: [
