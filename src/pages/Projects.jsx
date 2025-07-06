@@ -1,7 +1,6 @@
 import React from "react";
 import ProjectsCard from "../components/ProjectsCard";
-
-// import {TasteScript} from "../assets/TasteScript";
+import ShowCaseProjects from "../assets/ShowCaseProjects";
 
 const Projects = () => {
   return (
@@ -13,9 +12,9 @@ const Projects = () => {
           </h3>
           {/* card element */}
           <div className="grid gap-10">
-          <ProjectsCard />
-          <ProjectsCard />
-          <ProjectsCard />
+            {ShowCaseProjects.map((project, index) => (
+              <ProjectsCard key={index} project={project} />
+            ))}
           </div>
         </div>
       </>
