@@ -5,10 +5,9 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-scroll";
 import { getOffset } from "../utils/getOffset";
 
-export const drivePath = (id)=> (`https://drive.google.com/file/d/${id}`)
+export const drivePath = (id) => `https://drive.google.com/file/d/${id}`;
 
 const Hero = () => {
-
   const lightImage =
     "https://cdn-icons-png.flaticon.com/512/11743/11743974.png";
   const darkImage = "https://cdn-icons-png.flaticon.com/512/11743/11743790.png";
@@ -20,7 +19,7 @@ const Hero = () => {
     >
       {/* hero section */}
       <HeroBG />
-      <div className=" mt-5 flex flex-col-reverse gap-5 lg:grid lg:grid-cols-3 items-center place-items-center text-center ">
+      <div className=" mt-5 sm:mt-0 flex flex-col-reverse gap-5 lg:grid lg:grid-cols-3 items-center place-items-center text-center ">
         {/* left side */}
         <div className="md:col-span-2 md:space-y-8 sm:space-y-3 space-y-2 z-10">
           <p className="dark:text-white flex items-center sm:text-4xl text-2xl  justify-center lg:justify-start">
@@ -57,7 +56,7 @@ const Hero = () => {
             </h1>
           </div>
           {/* description */}
-          <p className="dark:text-[#9b9b9b] text-[#474747] lg:text-left w-[85%] lg:mx-0 mx-auto text-center text-lg ">
+          <p className="dark:text-[#9b9b9b] text-[#474747] lg:text-left w-[95%] sm:w-[85%] lg:mx-0 mx-auto text-center text-lg ">
             Passionate about building modern, scalable web applications with a
             strong foundation in Computer Science. Currently exploring Next.js,
             TypeScript, and DevOps through hands-on projects, focusing on clean
@@ -113,6 +112,18 @@ const Hero = () => {
                   className="bg-white rounded-sm -p-2 pointer-events-none"
                 />
               </motion.a>
+              <motion.a
+                whileHover={{ x: 5 }}
+                href="https://wa.me/+8801866965359"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/4423/4423697.png"
+                  width={35}
+                  height={35}
+                  alt=""
+                  className="bg-white rounded-sm -p-2 pointer-events-none"
+                />
+              </motion.a>
             </motion.div>
           </div>
           <div className="w-full flex justify-center lg:justify-start gap-5  ">
@@ -131,14 +142,19 @@ const Hero = () => {
             </Link>
             {/* resume */}
             <button className=" text-lg font-semibold text-center  flex justify-center items-center lg:justify-start lg:w-auto w-fit hover:link-hover group transition-all duration-300">
-              <a href={drivePath("1F1eWXFRsZUMo4cgzFInKGlkr2Erh3dc1")}target="_blank">Download Resume</a>
+              <a
+                href={drivePath("1F1eWXFRsZUMo4cgzFInKGlkr2Erh3dc1")}
+                target="_blank"
+              >
+                View Resume
+              </a>
               <IoIosArrowForward className="ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
             </button>
           </div>
         </div>
         {/* right side */}
 
-        <div className=" flex justify-center w-full">
+        <div className=" flex justify-center w-full lg:-mt-30 ">
           <img
             src={me}
             alt=""
