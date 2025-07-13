@@ -5,6 +5,7 @@ import Logo from "../components/Logo";
 // import * as Scroll from "react-scroll";
 import { useEffect, useState } from "react";
 import { getOffset } from "../utils/getOffset";
+import { drivePath } from "../components/Hero";
 // import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
@@ -98,7 +99,8 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {/* <DarkModeToggle /> */}
-          <a className="btn bg-[#ffaa00] hover:bg-yellow-600 text-white text-lg">Resume</a>
+
+          <a href={drivePath("1F1eWXFRsZUMo4cgzFInKGlkr2Erh3dc1")}target="_blank" className="btn bg-[#ffaa00] hover:bg-yellow-600 text-white text-lg">Resume</a>
         </div>
       </div>
     </div>

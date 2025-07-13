@@ -5,7 +5,10 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-scroll";
 import { getOffset } from "../utils/getOffset";
 
+export const drivePath = (id)=> (`https://drive.google.com/file/d/${id}`)
+
 const Hero = () => {
+
   const lightImage =
     "https://cdn-icons-png.flaticon.com/512/11743/11743974.png";
   const darkImage = "https://cdn-icons-png.flaticon.com/512/11743/11743790.png";
@@ -128,7 +131,7 @@ const Hero = () => {
             </Link>
             {/* resume */}
             <button className=" text-lg font-semibold text-center  flex justify-center items-center lg:justify-start lg:w-auto w-fit hover:link-hover group transition-all duration-300">
-              Download Resume{" "}
+              <a href={drivePath("1F1eWXFRsZUMo4cgzFInKGlkr2Erh3dc1")}target="_blank">Download Resume</a>
               <IoIosArrowForward className="ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
             </button>
           </div>
