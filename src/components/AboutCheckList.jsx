@@ -23,7 +23,7 @@ const AboutCheckList = () => {
       <div className="flex place-items-center gap-2">
         <FaCheck />
         <p className="dark:text-white">
-          {"("}Rapidly Learning{")"} Next.js, TypeScript{" "}
+          Next.js, TypeScript
         </p>
       </div>
       <div className="flex place-items-center gap-2">

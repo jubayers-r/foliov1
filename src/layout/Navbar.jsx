@@ -100,7 +100,7 @@ const Navbar = () => {
         <div className="navbar-end">
           {/* <DarkModeToggle /> */}
 
-          <a href={drivePath("1F1eWXFRsZUMo4cgzFInKGlkr2Erh3dc1")}target="_blank" className="btn bg-[#ffaa00] hover:bg-yellow-600 text-white text-lg">Resume</a>
+          <a href={drivePath("13DBNulrPURaik46B0VcKOBYS3wcx0di0")}target="_blank" className="btn bg-[#ffaa00] hover:bg-yellow-600 text-white text-lg">Resume</a>
         </div>
       </div>
     </div>

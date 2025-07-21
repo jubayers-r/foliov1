@@ -143,7 +143,7 @@ const Hero = () => {
             {/* resume */}
             <button className=" text-lg font-semibold text-center  flex justify-center items-center lg:justify-start lg:w-auto w-fit hover:link-hover group transition-all duration-300">
               <a
-                href={drivePath("1F1eWXFRsZUMo4cgzFInKGlkr2Erh3dc1")}
+                href={drivePath("13DBNulrPURaik46B0VcKOBYS3wcx0di0")}
                 target="_blank"
               >
                 View Resume
