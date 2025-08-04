@@ -5,7 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-scroll";
 import { getOffset } from "../utils/getOffset";
 
-export const drivePath = (id) => `https://drive.google.com/file/d/${id}`;
+export const drivePath = (id) => `https://drive.google.com/drive/folders/${id}`;
 
 const Hero = () => {
   const lightImage =
@@ -143,7 +143,7 @@ const Hero = () => {
             {/* resume */}
             <button className=" text-lg font-semibold text-center  flex justify-center items-center lg:justify-start lg:w-auto w-fit hover:link-hover group transition-all duration-300">
               <a
-                href={drivePath("13DBNulrPURaik46B0VcKOBYS3wcx0di0")}
+                href={drivePath("1DQHsKsAREGkSjKIdChSiTJqCyZgpabgr")}
                 target="_blank"
               >
                 View Resume
