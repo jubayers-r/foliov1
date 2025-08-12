@@ -1,11 +1,12 @@
-import React from "react";
+import { useState } from "react";
+import ProjectDialog from "./ProjectDialog";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
-
 const ProjectsCard = ({ project }) => {
   const { name, description, features, techLogo, link, img } = project;
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
     <>
@@ -68,12 +69,29 @@ const ProjectsCard = ({ project }) => {
                 href={linkObj.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn sm:btn-lg text-sm truncate"
+                className={`btn sm:btn-lg text-sm truncate  ${
+                  linkObj.label.toLowerCase() === "live"
+                    ? " bg-[#ffaa00] hover:bg-yellow-600 text-white"
+                    : "hover:bg-[#ffaa00]  hover:text-white"
+                }`}
               >
                 {linkObj.label}
               </a>
             ))}
 
+            {/* Details button triggers dialog */}
+            <button
+              className="btn sm:btn-lg text-sm truncate hover:bg-[#ffaa00]  hover:text-white"
+              onClick={() => setIsDialogOpen(true)}
+            >
+              Details
+            </button>
+
+            <ProjectDialog
+              isOpen={isDialogOpen}
+              onClose={() => setIsDialogOpen(false)}
+              project={project}
+            />
           </div>
         </div>
       </div>

@@ -39,6 +39,8 @@ const ShowCaseProjects = [
       techLogosMap["6.1"],
       techLogosMap["9"],
       techLogosMap["7"],
+      techLogosMap["14"],
+      techLogosMap["15.1"],
     ],
     img: [kp1, kp2, kp3, kp4, kp5, kp6, kp7, kp8],
     link: [
@@ -47,10 +49,17 @@ const ShowCaseProjects = [
         label: "GitHub",
         url: "https://github.com/jubayers-r/kindpaws-monorepo",
       },
-      {
-        label: "Details",
-        url: "https://github.com/jubayers-r/kindpaws-monorepo",
-      },
+    ],
+    challenges: [
+      "Managing role-based authentication and admin privileges with Firebase Auth was tricky.",
+      "Integrating Stripe payments and handling real-time donation updates required understanding async flows and APIs.",
+      "Ensuring smooth infinite scroll performance and maintaining verified adoption requests posed challenges.",
+    ],
+    futurePlans: [
+      "Improve donation analytics dashboard.",
+      "Implement push notifications for campaign updates.",
+      "Enhance mobile responsiveness.",
+      "Add multi-language support for broader user reach.",
     ],
   },
   {
@@ -73,6 +82,7 @@ const ShowCaseProjects = [
       techLogosMap["16"],
       techLogosMap["17"],
       techLogosMap["19"],
+      techLogosMap["7"],
     ],
     img: [hn1, hn2, hn3, hn4],
     link: [
@@ -81,10 +91,17 @@ const ShowCaseProjects = [
         label: "GitHub",
         url: "https://github.com/jubayers-r/mini-hacker-news",
       },
-      {
-        label: "Details",
-        url: "https://github.com/jubayers-r/mini-hacker-news",
-      },
+    ],
+    challenges: [
+      "Implementing recursive comment rendering with real-time nested threads was complex for a beginner.",
+      "Managing state efficiently across different story types (Top, New, Ask) and handling dark mode UI toggling was challenging.",
+      "Optimizing performance while using the Firebase API required learning advanced frontend techniques.",
+    ],
+    futurePlans: [
+      "Add offline support using service workers.",
+      "Implement user accounts for customized feeds.",
+      "Enhance accessibility features further.",
+      "Optimize SEO for better discoverability.",
     ],
   },
   {
@@ -107,7 +124,6 @@ const ShowCaseProjects = [
       techLogosMap["13"],
       techLogosMap["6"],
       techLogosMap["7"],
-
     ],
     img: [TasteScript1, TasteScript2, TasteScript3, TasteScript4],
     link: [
@@ -116,10 +132,17 @@ const ShowCaseProjects = [
         label: "GitHub",
         url: "https://github.com/jubayers-r/recipe-book-monorepo",
       },
-      {
-        label: "Details",
-        url: "https://github.com/jubayers-r/recipe-book-monorepo",
-      },
+    ],
+    challenges: [
+      "Integrating Firebase authentication with MongoDB backend required learning about syncing data across different services.",
+      "Building a responsive UI that works seamlessly on various devices was tough initially.",
+      "Handling recipe management and personalized dashboards demanded good state management practices.",
+    ],
+    futurePlans: [
+      "Introduce social sharing and collaboration features.",
+      "Add push notifications for new recipes.",
+      "Improve search functionality with filters.",
+      "Enhance accessibility for users with disabilities.",
     ],
   },
 ];
