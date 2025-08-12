@@ -1,5 +1,4 @@
 import aboutIMG from "../assets/about.jpg";
-
 import AboutCheckList from "../components/AboutCheckList";
 import AboutPara from "../components/AboutPara";
 import CTA from "../components/CTA";

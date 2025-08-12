@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const AboutPara = () => {
   const [showFull, setShowFull] = useState(false);
   return (
     <>
       <div className="p-4  max-w-4xl mx-auto">
-        <h3 className="text-4xl font-semibold mb-4">About Me</h3>
-        <p className=" leading-relaxed text-muted-foreground text-lg">
+        <h3 className="text-2xl text-center lg:text-4xl font-semibold lg:mb-4">
+          About Me
+        </h3>
+        <p
+          className=" leading-relaxed text-muted-foreground text-[16px] lg:text-lg"
+          style={{ hyphens: "auto", wordWrap: "break-word" }}
+        >
           In early 2024, I took a leap of faith and transitioned into web
           development after realizing that graphic design—while creatively
           fulfilling—didn’t align with my long-term goals. During my time at{" "}
@@ -34,8 +39,11 @@ const AboutPara = () => {
               truly boggles and excites my mind. Currently, I’m focused on
               deepening my expertise in backend development,{" "}
               <strong>DevOps</strong>, data structures and algorithms{" "}
-              <strong>(DSA)</strong> , and emerging technologies like{" "}
-              <strong>Web3</strong>. I’m always curious and eager to learn more.
+              <strong>
+                {"("}DSA{")"}
+              </strong>{" "}
+              , and emerging technologies like <strong>Web3</strong>. I’m always
+              curious and eager to learn more.
               <br /> <br />
               Outside programming, I’m not much of an outdoor or sports person,
               but I love listening to people. Understanding human behavior and

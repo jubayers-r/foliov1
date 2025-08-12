@@ -1,4 +1,3 @@
-import React from "react";
 import { FaCheck } from "react-icons/fa6";
 
 const AboutCheckList = () => {
@@ -22,14 +21,12 @@ const AboutCheckList = () => {
       </div>
       <div className="flex place-items-center gap-2">
         <FaCheck />
-        <p className="dark:text-white">
-          Next.js, TypeScript
-        </p>
+        <p className="dark:text-white">Next.js, TypeScript</p>
       </div>
       <div className="flex place-items-center gap-2">
         <FaCheck />
         <p className="dark:text-white">
-          {"("}Rapidly Learning{")"} DevOps{" "}
+          DevOps {"("}Intermidiate{")"}
         </p>
       </div>
     </>
