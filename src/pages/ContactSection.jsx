@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Mail, Phone } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import toast, { Toaster } from "react-hot-toast";
+import { Element } from "react-scroll";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -31,7 +32,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section
+    <Element
       id="contact"
       className=" px-4 py-20 bg-white dark:bg-black text-black dark:text-white"
       data-aos="fade-down"
@@ -74,7 +75,7 @@ const ContactSection = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Bruce Thomas Wayne"
+            placeholder="Bruce Wayne"
             required
           />
           <FormInput
@@ -91,7 +92,7 @@ const ContactSection = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Write your message here..."
+            placeholder="I really liked your work, let's do a quick meeting!"
             required
           />
           <button
@@ -102,7 +103,7 @@ const ContactSection = () => {
           </button>
         </motion.form>
       </motion.div>
-    </section>
+    </Element>
   );
 };
 

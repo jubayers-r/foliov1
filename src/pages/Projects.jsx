@@ -1,13 +1,15 @@
 import React from "react";
 import ProjectsCard from "../components/ProjectsCard";
 import ShowCaseProjects from "../assets/ShowCaseProjects";
+import { Element } from "react-scroll";
+
 
 const Projects = () => {
   return (
-    <div id="projects" data-aos="fade-down">
+    <Element  id="projects" data-aos="fade-down">
       <>
         <div className=" my-50 max-w-10/11 md:max-w-9/11 mx-auto">
-          <h3 className="text-center mb-10 font-bold text-4xl">
+          <h3 className="text-center mb-10 font-bold text-2xl lg:text-4xl">
             Recent Projects
           </h3>
           {/* card element */}
@@ -18,7 +20,7 @@ const Projects = () => {
           </div>
         </div>
       </>
-    </div>
+    </Element >
   );
 };
 

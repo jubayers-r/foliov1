@@ -3,6 +3,7 @@ import me from "../assets/me.jpg";
 import { motion } from "motion/react";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-scroll";
+import { Element } from "react-scroll";
 import { getOffset } from "../utils/getOffset";
 
 export const drivePath = (id) => `https://drive.google.com/drive/folders/${id}`;
@@ -13,7 +14,7 @@ const Hero = () => {
   const darkImage = "https://cdn-icons-png.flaticon.com/512/11743/11743790.png";
 
   return (
-    <div
+    <Element
       id="me"
       className=" max-w-10/11 md:max-w-9/11 flex flex-col mx-auto lg:my-40 my-10"
     >
@@ -162,7 +163,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

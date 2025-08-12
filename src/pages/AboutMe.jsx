@@ -3,22 +3,23 @@ import aboutIMG from "../assets/about.jpg";
 import AboutCheckList from "../components/AboutCheckList";
 import AboutPara from "../components/AboutPara";
 import CTA from "../components/CTA";
+import { Element } from "react-scroll";
 
 const AboutMe = () => {
   return (
-    <div id="about">
+    <Element id="about">
       <>
         <div
           className="max-w-10/11 md:max-w-9/11 mx-auto lg:mx-30 my-50"
           data-aos="fade-down"
         >
-          <div className="grid lg:grid-cols-2 lg:gap-20 lg:my-30  place-items-center">
+          <div className="grid lg:grid-cols-2 lg:gap-20 lg:my-30  justify-items-center">
             {/* left side */}
             <div className="px-4">
               <img
                 src={aboutIMG}
                 alt=""
-                className="h-60 sm:h-96 w-auto -scale-x-100 pointer-events-none"
+                className="h-72 sm:h-96 w-auto -scale-x-100 pointer-events-none lg:mt-20"
               />
             </div>
             {/* right side */}
@@ -37,7 +38,7 @@ const AboutMe = () => {
           </div>
         </div>
       </>
-    </div>
+    </Element>
   );
 };
 
